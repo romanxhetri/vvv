@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import MenuItemModal from './MenuItemModal';
 import AnimatedText3D from './AnimatedText3D';
 
-const categories: MenuCategory[] = ['Appetizers', 'Main Courses', 'Desserts'];
+const categories: MenuCategory[] = ['Appetizers', 'Main Courses', 'Desserts', 'Beverages'];
 const dietaryTags: DietaryTag[] = ['Vegetarian', 'Vegan', 'Gluten-Free', 'Spicy'];
 
 const MenuItemCard: React.FC<{ item: MenuItem; onClick: () => void }> = ({ item, onClick }) => (

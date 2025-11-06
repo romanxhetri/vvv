@@ -37,6 +37,7 @@ export const SPECIALS_DATA: MenuItem[] = [
 ];
 
 export const MENU_DATA: MenuItem[] = [
+  // Appetizers
   {
     id: 1,
     name: 'Truffle Parmesan Potato Skins',
@@ -71,6 +72,31 @@ export const MENU_DATA: MenuItem[] = [
     tags: [],
     ingredients: ['Potato', 'Duck Confit', 'Cheese Curds', 'Gravy'],
   },
+  {
+    id: 9,
+    name: 'Peruvian Causa Rellena',
+    description: 'Chilled potato terrine, avocado, chicken salad.',
+    longDescription: 'A classic Peruvian dish. Layers of chilled, seasoned mashed potatoes are filled with a creamy chicken and avocado salad, and topped with a hard-boiled egg. A refreshing and flavorful starter.',
+    price: 18,
+    image: 'https://images.unsplash.com/photo-1632315352329-873539855524?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
+    category: 'Appetizers',
+    tags: ['Gluten-Free'],
+    ingredients: ['Potato', 'Chicken', 'Avocado', 'Mayonnaise', 'Lime', 'Aji Amarillo'],
+  },
+  {
+    id: 10,
+    name: 'Loaded Sweet Potato Fries',
+    description: 'Crispy sweet potato fries, black beans, jalapeños, cheese sauce.',
+    longDescription: 'A mountain of our crispy sweet potato fries loaded with savory black beans, spicy pickled jalapeños, a creamy vegan cheese sauce, and a sprinkle of fresh cilantro. Perfect for sharing.',
+    price: 17,
+    image: 'https://images.unsplash.com/photo-1598827988286-6455a73e313d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
+    category: 'Appetizers',
+    tags: ['Vegan', 'Gluten-Free', 'Spicy'],
+    ingredients: ['Sweet Potato', 'Black Beans', 'Jalapeños', 'Vegan Cheese', 'Cilantro'],
+    isPopular: true,
+  },
+  
+  // Main Courses
   {
     id: 4,
     name: 'Shepherd\'s Pie Reimagined',
@@ -107,6 +133,31 @@ export const MENU_DATA: MenuItem[] = [
     ingredients: ['Salmon', 'Potato', 'Dill', 'Cream', 'Spinach'],
   },
   {
+    id: 11,
+    name: 'Steak Frites Classique',
+    description: '8oz flat iron steak, béarnaise sauce, hand-cut potato fries.',
+    longDescription: 'The quintessential Parisian bistro dish. A perfectly cooked 8oz flat iron steak with a classic béarnaise sauce, served with a generous portion of our signature crispy, hand-cut potato fries. Simple, yet exquisitely satisfying.',
+    price: 45,
+    image: 'https://images.unsplash.com/photo-1624329922245-a75d1532734a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
+    category: 'Main Courses',
+    tags: [],
+    ingredients: ['Beef Steak', 'Potato', 'Egg Yolk', 'Butter', 'Tarragon'],
+    isPopular: true,
+  },
+  {
+    id: 12,
+    name: 'Vegan Potato & Chickpea Curry',
+    description: 'Aromatic coconut curry, potatoes, chickpeas, spinach, basmati rice.',
+    longDescription: 'A hearty and comforting curry featuring tender potatoes and chickpeas simmered in a fragrant coconut milk-based sauce with spinach, ginger, garlic, and a blend of aromatic spices. Served with fluffy basmati rice.',
+    price: 28,
+    image: 'https://images.unsplash.com/photo-1588145152538-f6a8f15b3cce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
+    category: 'Main Courses',
+    tags: ['Vegan', 'Gluten-Free'],
+    ingredients: ['Potato', 'Chickpeas', 'Coconut Milk', 'Spinach', 'Spices', 'Basmati Rice'],
+  },
+  
+  // Desserts
+  {
     id: 7,
     name: 'Sweet Potato Chocolate Brownie',
     description: 'Fudgy brownie made with sweet potato, vanilla ice cream.',
@@ -128,7 +179,88 @@ export const MENU_DATA: MenuItem[] = [
     tags: ['Vegetarian'],
     ingredients: ['Potato', 'Flour', 'Cardamom', 'Cinnamon', 'Caramel'],
   },
+  {
+    id: 14,
+    name: 'Potato Churros with Spiced Chocolate',
+    description: 'Crispy on the outside, fluffy inside. Served with dipping sauce.',
+    longDescription: 'A delightful twist on a classic. Potato in the dough makes these churros incredibly light and fluffy. Fried to golden perfection, dusted with cinnamon sugar, and served with a warm, spiced dark chocolate dipping sauce.',
+    price: 15,
+    image: 'https://images.unsplash.com/photo-1552339227-242862a9a7a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
+    category: 'Desserts',
+    tags: ['Vegetarian'],
+    ingredients: ['Potato', 'Flour', 'Cinnamon', 'Dark Chocolate', 'Chili Powder'],
+  },
+
+  // Beverages
+  {
+    id: 15,
+    name: 'Potato Vodka Martini',
+    description: 'Ultra-smooth potato vodka, dry vermouth, choice of olive or twist.',
+    longDescription: 'Experience the clean, crisp taste of a premium potato vodka in this classic cocktail. Shaken or stirred to your preference with a whisper of dry vermouth and garnished with either olives or a lemon twist.',
+    price: 18,
+    image: 'https://images.unsplash.com/photo-1623593688624-99836e594191?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
+    category: 'Beverages',
+    tags: [],
+    ingredients: ['Potato Vodka', 'Dry Vermouth', 'Olive', 'Lemon']
+  },
+  {
+    id: 16,
+    name: 'Rosemary Grapefruit Fizz',
+    description: 'A refreshing non-alcoholic spritz with herbal and citrus notes.',
+    longDescription: 'A sophisticated mocktail featuring fresh grapefruit juice, a house-made rosemary simple syrup, and topped with sparkling water. A perfectly balanced and refreshing drink for any time of day.',
+    price: 12,
+    image: 'https://images.unsplash.com/photo-1625862362532-a58f4b0051e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
+    category: 'Beverages',
+    tags: ['Vegan'],
+    ingredients: ['Grapefruit Juice', 'Rosemary', 'Sparkling Water']
+  },
+  {
+    id: 17,
+    name: '"The Spud" Old Fashioned',
+    description: 'Sweet potato-infused bourbon, bitters, orange peel.',
+    longDescription: 'Our unique take on a timeless classic. We infuse bourbon with roasted sweet potato and cinnamon, then stir it with aromatic bitters and a touch of sugar. Served over a large ice cube with an orange peel garnish.',
+    price: 20,
+    image: 'https://images.unsplash.com/photo-1586971576182-4161a09424c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
+    category: 'Beverages',
+    tags: [],
+    ingredients: ['Bourbon', 'Sweet Potato', 'Bitters', 'Orange Peel'],
+    isChefPick: true,
+  },
+  {
+    id: 18,
+    name: 'Artisanal Coffee',
+    description: 'Locally roasted single-origin beans, prepared as pour-over or espresso.',
+    longDescription: 'We partner with a local roaster to bring you exceptional single-origin coffee. Choose your preparation: a meticulous pour-over to highlight delicate notes, or a classic espresso for a rich, intense flavor.',
+    price: 6,
+    image: 'https://images.unsplash.com/photo-1559496417-e7f25cb247f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
+    category: 'Beverages',
+    tags: ['Vegan'],
+    ingredients: ['Coffee Beans', 'Water'],
+  },
+  {
+    id: 19,
+    name: 'Local Craft Beer',
+    description: 'A rotating selection of the best IPAs and Lagers from local breweries.',
+    longDescription: 'We proudly support our local craft beer scene. Ask your server about our current rotating taps, featuring a curated selection of IPAs, Lagers, Stouts, and Sours from the best breweries in the area.',
+    price: 9,
+    image: 'https://images.unsplash.com/photo-1608270586620-248524c67de9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
+    category: 'Beverages',
+    tags: [],
+    ingredients: ['Hops', 'Barley', 'Yeast', 'Water'],
+  },
+  {
+    id: 20,
+    name: 'House Red & White Wine',
+    description: 'Curated selections of red and white wine, available by the glass or bottle.',
+    longDescription: 'Our sommelier has carefully selected versatile and food-friendly red and white wines to complement our menu. Currently featuring a fruit-forward Pinot Noir and a crisp Sauvignon Blanc. Available by the glass or bottle.',
+    price: 14,
+    image: 'https://images.unsplash.com/photo-1594236391442-990a41d6f461?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
+    category: 'Beverages',
+    tags: [],
+    ingredients: ['Grapes'],
+  },
 ];
+
 
 export const REVIEWS_DATA: Review[] = [
   {
