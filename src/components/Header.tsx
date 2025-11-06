@@ -8,6 +8,7 @@ const NavLinks: React.FC<{onClick?: () => void}> = ({onClick}) => (
     <a href="#about" onClick={onClick} className="text-stone-700 hover:text-amber-800 transition-colors duration-300">About</a>
     <a href="#menu" onClick={onClick} className="text-stone-700 hover:text-amber-800 transition-colors duration-300">Menu</a>
     <a href="#reservations" onClick={onClick} className="text-stone-700 hover:text-amber-800 transition-colors duration-300">Reservations</a>
+    <a href="#events" onClick={onClick} className="text-stone-700 hover:text-amber-800 transition-colors duration-300">Events</a>
     <a href="#gallery" onClick={onClick} className="text-stone-700 hover:text-amber-800 transition-colors duration-300">Gallery</a>
     <a href="#contact" onClick={onClick} className="bg-amber-800 text-white px-4 py-2 rounded-full hover:bg-amber-900 transition-transform duration-300 hover:scale-105">Contact Us</a>
   </>

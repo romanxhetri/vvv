@@ -1,5 +1,40 @@
 
-import { MenuItem, Review } from './types';
+import { MenuItem, Review, OperatingHours } from './types';
+
+export const OPERATING_HOURS: OperatingHours = {
+  Tuesday: { open: '17:00', close: '22:00' },
+  Wednesday: { open: '17:00', close: '22:00' },
+  Thursday: { open: '17:00', close: '22:00' },
+  Friday: { open: '17:00', close: '22:00' },
+  Saturday: { open: '16:00', close: '23:00' },
+  Sunday: { open: '16:00', close: '23:00' },
+};
+
+export const SPECIALS_DATA: MenuItem[] = [
+    {
+        id: 101,
+        name: 'Lobster & Potato Gratin',
+        description: 'Decadent layers of potato, cream, and fresh lobster.',
+        longDescription: 'A luxurious twist on a classic. Thinly sliced potatoes are layered with Gruyère cheese, heavy cream, and generous chunks of sweet, tender lobster meat. Baked until golden and bubbling, it\'s the ultimate indulgence.',
+        price: 48,
+        image: 'https://picsum.photos/800/600?random=30',
+        category: 'Main Courses',
+        tags: [],
+        ingredients: ['Potato', 'Lobster', 'Gruyère Cheese', 'Cream', 'Garlic'],
+        isChefPick: true,
+    },
+    {
+        id: 102,
+        name: 'Purple Potato Mousse',
+        description: 'A vibrant and surprisingly light dessert.',
+        longDescription: 'Experience the unexpected. We transform purple potatoes into a silky, airy mousse, lightly sweetened and flavored with a hint of vanilla and lavender. Served with a crispy almond tuile, it\'s a dessert that will delight and surprise your palate.',
+        price: 18,
+        image: 'https://picsum.photos/800/600?random=31',
+        category: 'Desserts',
+        tags: ['Vegetarian', 'Gluten-Free'],
+        ingredients: ['Purple Potato', 'Coconut Cream', 'Vanilla', 'Lavender', 'Almond'],
+    }
+];
 
 export const MENU_DATA: MenuItem[] = [
   {
@@ -12,6 +47,7 @@ export const MENU_DATA: MenuItem[] = [
     category: 'Appetizers',
     tags: ['Vegetarian'],
     ingredients: ['Potato', 'Truffle Oil', 'Parmesan Cheese', 'Chives', 'Garlic Aioli'],
+    isPopular: true,
   },
   {
     id: 2,
@@ -45,6 +81,7 @@ export const MENU_DATA: MenuItem[] = [
     category: 'Main Courses',
     tags: [],
     ingredients: ['Lamb', 'Carrots', 'Onions', 'Potato', 'Cream', 'Cheese'],
+    isChefPick: true,
   },
   {
     id: 5,
@@ -56,6 +93,7 @@ export const MENU_DATA: MenuItem[] = [
     category: 'Main Courses',
     tags: ['Vegetarian'],
     ingredients: ['Potato', 'Flour', 'Egg', 'Wild Mushrooms', 'Garlic', 'Parmesan'],
+    isPopular: true,
   },
   {
     id: 6,

@@ -12,6 +12,8 @@ export interface MenuItem {
   category: MenuCategory;
   tags: DietaryTag[];
   ingredients: string[];
+  isPopular?: boolean;
+  isChefPick?: boolean;
 }
 
 export interface Review {
@@ -24,3 +26,14 @@ export interface Review {
 export interface CartItem extends MenuItem {
   quantity: number;
 }
+
+export type DayOfWeek = 'Sunday' | 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday';
+
+export interface TimeRange {
+    open: string;
+    close: string;
+}
+
+export type OperatingHours = {
+    [key in DayOfWeek]?: TimeRange;
+};

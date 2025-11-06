@@ -11,6 +11,8 @@ import { CartProvider } from './contexts/CartContext';
 import CartSidebar from './components/CartSidebar';
 import Reservations from './components/Reservations';
 import Reviews from './components/Reviews';
+import Specials from './components/Specials';
+import Events from './components/Events';
 
 const App: React.FC = () => {
   return (
@@ -20,11 +22,13 @@ const App: React.FC = () => {
         <CartSidebar />
         <main>
           <Hero />
+          <Specials />
           <About />
           <Menu />
           <Reservations />
           <Gallery />
           <Reviews />
+          <Events />
           <Contact />
         </main>
         <Footer />

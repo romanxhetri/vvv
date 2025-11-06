@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import OperatingStatus from './OperatingStatus';
 
 const Hero: React.FC = () => {
   return (
@@ -35,6 +36,14 @@ const Hero: React.FC = () => {
         >
           Explore the Menu
         </motion.a>
+         <motion.div 
+            className="mt-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+        >
+            <OperatingStatus />
+        </motion.div>
       </div>
     </section>
   );

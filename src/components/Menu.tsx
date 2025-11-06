@@ -21,6 +21,10 @@ const MenuItemCard: React.FC<{ item: MenuItem; onClick: () => void }> = ({ item,
     <div className="relative">
       <img src={item.image} alt={item.name} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
       <div className="absolute bottom-0 left-0 bg-amber-800 text-white px-3 py-1 text-lg font-bold">${item.price}</div>
+       <div className="absolute top-2 right-2 flex flex-col gap-1 items-end">
+            {item.isPopular && <span className="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full shadow-md">Popular</span>}
+            {item.isChefPick && <span className="bg-indigo-600 text-white text-xs font-bold px-2 py-1 rounded-full shadow-md">Chef's Pick</span>}
+        </div>
     </div>
     <div className="p-4">
       <h4 className="text-xl font-semibold text-stone-800 truncate">{item.name}</h4>
