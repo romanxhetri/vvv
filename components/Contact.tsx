@@ -1,0 +1,61 @@
+
+import React, { useState } from 'react';
+
+const Contact: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({ ...prevState, [name]: value }));
+  };
+
+  return (
+    <section id="contact" className="py-20 bg-stone-50">
+      <div className="container mx-auto px-6">
+        <h2 className="text-4xl font-serif font-bold text-center mb-12 text-amber-900">Get In Touch</h2>
+        <div className="grid md:grid-cols-2 gap-12">
+          <div className="bg-white p-8 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-serif font-semibold mb-4 text-stone-800">Contact Information</h3>
+            <div className="space-y-4 text-stone-700">
+              <p><strong>Address:</strong> 123 Culinary Lane, Flavor Town, 45678</p>
+              <p><strong>Phone:</strong> (555) 123-4567</p>
+              <p><strong>Email:</strong> reservations@geminiseatery.com</p>
+            </div>
+            <h3 className="text-2xl font-serif font-semibold mt-8 mb-4 text-stone-800">Hours</h3>
+            <div className="space-y-2 text-stone-700">
+              <p><strong>Monday - Friday:</strong> 5:00 PM - 10:00 PM</p>
+              <p><strong>Saturday - Sunday:</strong> 4:00 PM - 11:00 PM</p>
+            </div>
+          </div>
+          <div className="bg-white p-8 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-serif font-semibold mb-4 text-stone-800">Send us a message</h3>
+            <form name="contact" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="contact" />
+              <div className="mb-4">
+                <label htmlFor="name" className="block text-stone-700 mb-2">Name</label>
+                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} className="w-full px-4 py-2 border border-stone-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-800" required />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="email" className="block text-stone-700 mb-2">Email</label>
+                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className="w-full px-4 py-2 border border-stone-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-800" required />
+              </div>
+              <div className="mb-6">
+                <label htmlFor="message" className="block text-stone-700 mb-2">Message</label>
+                <textarea id="message" name="message" rows={4} value={formData.message} onChange={handleChange} className="w-full px-4 py-2 border border-stone-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-800" required></textarea>
+              </div>
+              <button type="submit" className="w-full bg-amber-800 text-white font-bold py-3 px-6 rounded-md hover:bg-amber-900 transition-colors duration-300">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
