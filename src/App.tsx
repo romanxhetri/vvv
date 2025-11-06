@@ -17,7 +17,7 @@ import Events from './components/Events';
 const App: React.FC = () => {
   return (
     <CartProvider>
-      <div className="bg-stone-50 text-stone-800">
+      <div className="bg-[#F8F5F2] text-stone-800">
         <Header />
         <CartSidebar />
         <main>

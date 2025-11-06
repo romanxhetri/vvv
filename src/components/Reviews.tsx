@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { REVIEWS_DATA } from '../constants';
 import { Star } from 'lucide-react';
 import { motion } from 'framer-motion';
+import AnimatedText3D from './AnimatedText3D';
 
 const StarRating: React.FC<{ rating: number }> = ({ rating }) => {
     return (
@@ -36,7 +37,7 @@ const ReviewForm: React.FC = () => {
     }
     
     return (
-        <div className="bg-white p-8 rounded-lg shadow-lg mt-16">
+        <div className="bg-white p-8 rounded-lg shadow-lg mt-16 border border-stone-200/50">
             <h3 className="text-3xl font-serif font-bold text-center mb-6 text-amber-900">Leave a Review</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -46,7 +47,7 @@ const ReviewForm: React.FC = () => {
                         id="name" 
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="w-full px-4 py-2 border border-stone-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-800" 
+                        className="w-full px-4 py-2 border border-stone-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-800 bg-stone-50" 
                         required 
                     />
                 </div>
@@ -62,6 +63,7 @@ const ReviewForm: React.FC = () => {
                                     onClick={() => setRating(starValue)}
                                     onMouseEnter={() => setHoverRating(starValue)}
                                     onMouseLeave={() => setHoverRating(0)}
+                                    className="cursor-pointer"
                                 >
                                     <Star size={28} className={`transition-colors ${(hoverRating || rating) >= starValue ? 'text-amber-500 fill-current' : 'text-stone-300'}`} />
                                 </button>
@@ -76,11 +78,11 @@ const ReviewForm: React.FC = () => {
                         rows={4}
                         value={reviewText}
                         onChange={(e) => setReviewText(e.target.value)}
-                        className="w-full px-4 py-2 border border-stone-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-800" 
+                        className="w-full px-4 py-2 border border-stone-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-800 bg-stone-50" 
                         required
                     ></textarea>
                 </div>
-                <button type="submit" className="w-full bg-amber-800 text-white font-bold py-3 px-6 rounded-md hover:bg-amber-900 transition-colors duration-300">
+                <button type="submit" className="w-full bg-amber-800 text-white font-bold py-3 px-6 rounded-md hover:bg-amber-900 transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105">
                     Submit Review
                 </button>
             </form>
@@ -90,14 +92,14 @@ const ReviewForm: React.FC = () => {
 
 const Reviews: React.FC = () => {
     return (
-        <section id="reviews" className="py-20 bg-stone-50">
+        <section id="reviews" className="py-24 bg-[#F8F5F2]">
             <div className="container mx-auto px-6">
-                <h2 className="text-4xl font-serif font-bold text-center mb-12 text-amber-900">What Our Guests Are Saying</h2>
+                <AnimatedText3D el="h2" text="What Our Guests Are Saying" className="text-4xl font-serif font-bold text-center mb-12 text-amber-900" />
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {REVIEWS_DATA.map((review, index) => (
                         <motion.div 
                             key={index} 
-                            className="bg-white p-8 rounded-lg shadow-lg flex flex-col"
+                            className="bg-white p-8 rounded-lg shadow-lg flex flex-col border border-stone-200/50"
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.5 }}
