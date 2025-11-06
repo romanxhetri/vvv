@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 
 const Contact: React.FC = () => {
@@ -20,14 +21,15 @@ const Contact: React.FC = () => {
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-serif font-semibold mb-4 text-stone-800">Contact Information</h3>
             <div className="space-y-4 text-stone-700">
-              <p><strong>Address:</strong> 123 Culinary Lane, Flavor Town, 45678</p>
-              <p><strong>Phone:</strong> (555) 123-4567</p>
-              <p><strong>Email:</strong> reservations@geminiseatery.com</p>
+              <p><strong>Address:</strong> 123 Potato Patch Way, Spudville, 45678</p>
+              <p><strong>Phone:</strong> (555) POT-ATOE</p>
+              <p><strong>Email:</strong> reservations@potatoandfriends.com</p>
             </div>
             <h3 className="text-2xl font-serif font-semibold mt-8 mb-4 text-stone-800">Hours</h3>
             <div className="space-y-2 text-stone-700">
-              <p><strong>Monday - Friday:</strong> 5:00 PM - 10:00 PM</p>
+              <p><strong>Tuesday - Friday:</strong> 5:00 PM - 10:00 PM</p>
               <p><strong>Saturday - Sunday:</strong> 4:00 PM - 11:00 PM</p>
+              <p><strong>Monday:</strong> Closed for potato dreaming</p>
             </div>
           </div>
           <div className="bg-white p-8 rounded-lg shadow-lg">
